@@ -31,11 +31,16 @@ ARG DEPENDENCY=build/docker/dependency
 COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
 COPY ${DEPENDENCY}/META-INF /app/META-INF
 COPY ${DEPENDENCY}/BOOT-INF/classes /app
-CMD ["java","-cp","app:app/lib/*","hello.Application"]
+CMD ["java","-cp","app:app/lib/*","se.experis.Application"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","se.experis.Application"]
 
 ````
+#### _note:_ 
+_as long as the Docker file contains either bot the CMD and ENTRYPOINT
+it seems to work regardless of order but we could just run with only the CMD and it would still work_
 
-inside gitbash or whatever
+
+#### inside gitbash or whatever
 
 build the docker this could also be done in intelliJ
 
@@ -93,6 +98,39 @@ latest: digest: sha256:d460bd9b60562416e14a79d31dd0253aea9e860781e35c173786d7363
 Your image has been successfully pushed. You can now release it with the 'container:release' command.
 
 ````
+
+#### _note: this is when the Dockerfile contains only the ``CMD...``_
+_Above at step 7 it looks like the  ``CMD...`` has changed back to ``ENTRYPOINT``
+ according to the website linked above_
+ 
+ > Understand how CMD and ENTRYPOINT interact
+ 
+ > Both CMD and ENTRYPOINT instructions define what command gets executed when running a container. There are few rules that describe their co-operation.
+ 
+ > 1. Dockerfile should specify at least one of CMD or ENTRYPOINT commands.
+ 
+ > 2. ENTRYPOINT should be defined when using the container as an executable.
+ 
+ > 3. CMD should be used as a way of defining default arguments for an ENTRYPOINT command or for executing an ad-hoc command in a container.
+ 
+ > 4. CMD will be overridden when running the container with alternative arguments.
+
+So i assume there are some magical wizardry going on behind the scenes
+because the push with ``ENTRYPOINT`` instead of ``CMD`` in the
+``Dockerfile`` seems to work fine but when we try to (or at least when I do) release the thing we get the following error.
+
+````
+(node:3160) UnhandledPromiseRejectionWarning: Error: Expected response to be successful, got 422
+    at Request.handleFailure [as _handleFailure] (C:\Program Files\heroku\client\node_modules\heroku-client\lib\request.js:254:11)
+    at Request.<anonymous> (C:\Program Files\heroku\client\node_modules\heroku-cli-util\lib\command.js:56:12)
+    at concat.then (C:\Program Files\heroku\client\node_modules\heroku-client\lib\request.js:148:16)
+    at processTicksAndRejections (internal/process/task_queues.js:86:5)
+(node:3160) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:3160) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+Releasing images web to pa-annoying-docker... !
+ !    No command specified for process type web
+
+```` 
 
 then finally release the thing to the world with
 
