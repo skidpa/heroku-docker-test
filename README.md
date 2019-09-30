@@ -4,6 +4,18 @@ heroku-docker-test
 rebuild docker with the application.properties set to
 ```` server.port=${PORT}````
 
+and in the Dockerfile
+change ``ENTRYPOINT`` to ``CMD``
+so that it looks like this
+
+````
+CMD ["java","-cp","app:app/lib/*","package_name.Application_name"]
+````
+
+got the CMD thing from
+https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#cmd
+have no clue if this is good or bad but hey it works...
+
 inside gitbash or whatever
 ````heroku create appname --region en````
 
