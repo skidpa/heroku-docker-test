@@ -40,7 +40,7 @@ _as long as the Docker file contains either bot the CMD and ENTRYPOINT
 it seems to work regardless of order but we could just run with only the CMD and it would still work_
 
 
-####inside gitbash or whatever
+#### inside gitbash or whatever
 
 build the docker this could also be done in intelliJ
 
