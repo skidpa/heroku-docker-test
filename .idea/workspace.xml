@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="164e066a-199f-4828-93bd-bccc3ba2180d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/se/experis/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/se/experis/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/dependency/BOOT-INF/classes/se/experis/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/dependency/BOOT-INF/classes/se/experis/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/distributions/heroku-docker-test.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/heroku-docker-test.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/build/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/docker/dependency/BOOT-INF/classes/se/experis/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/docker/dependency/BOOT-INF/classes/se/experis/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/heroku-docker-test-0.1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/heroku-docker-test-0.1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/se/experis/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/experis/Application.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
